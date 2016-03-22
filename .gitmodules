@@ -1,0 +1,3 @@
+[submodule "deps/openddl-parser"]
+	path = deps/openddl-parser
+	url = https://github.com/kimkulling/openddl-parser.git
