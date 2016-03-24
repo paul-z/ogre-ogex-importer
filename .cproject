@@ -40,10 +40,11 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.66497515" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option id="gnu.cpp.link.option.paths.1667276951" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ogre-ogex-importer/deps/openddl-parser/lib}&quot;"/>
+									<listOptionValue builtIn="false" value="/usr/local/lib"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.1825377999" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="openddl_parser"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="OgreMain"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="openddl_parser"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="boost_system"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1918364636" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">

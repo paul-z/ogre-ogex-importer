@@ -10,6 +10,7 @@
 
 #include <OgreMesh2.h>
 #include <Vao/OgreVaoManager.h>
+#include <OgreException.h>
 
 #include <openddlparser/OpenDDLParser.h>
 
@@ -39,12 +40,25 @@ public:
 
 private:
 	String mFileName;
+	ODDLParser::DDLNode* mOGEXTreeRoot;
 
 	// Helper methods for mesh loading
+
 	void procGeometryObj(ODDLParser::DDLNode* geometryObj);
 	void procMesh(ODDLParser::DDLNode* meshObj);
-	void procVertexArr(ODDLParser::DDLNode* vertexArrObj);
-	void procVertex(ODDLParser::DataArrayList* vertexObj);
+	void printVertexArr(ODDLParser::DataArrayList* vaList);
+	Ogre::Vector3 getVertexFrom(ODDLParser::DataArrayList* vertexObj);
+	ODDLParser::DataArrayList* getPosListFrom(ODDLParser::DDLNode* meshObj);
+	ODDLParser::DataArrayList* getNormListFrom(ODDLParser::DDLNode* meshObj);
+	ODDLParser::DataArrayList* getIndListFrom(ODDLParser::DDLNode* meshObj);
+
+	/// Get a DDLNode that has "attrib" property set to value "atribValue" and is of type "nodeType"
+	ODDLParser::DDLNode* getAttribNodeFrom(ODDLParser::DDLNode* parrentNode, const String& attribValue, const String& nodeType);
+
+	/// Get the mesh node of the first GeometryObject named "geomObjName"
+	/// Q: Ogre mesh name = OGEX GeomObj name ??????????????????????????????????????
+	ODDLParser::DDLNode* findMeshNode(String geomObjName);
+
 };
 
 } /* namespace Ogre */

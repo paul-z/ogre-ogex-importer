@@ -20,6 +20,7 @@ int main() {
 	Ogre::OGEXImporter* imp = new Ogre::OGEXImporter(kFilePath);
 
 	imp->parseFile();
+	imp->loadMesh("geometry1");
 
 	return 0;
 }
